@@ -6,14 +6,18 @@ const createTodo = zod.object(
         description: zod.string(),
         isCompleted: zod.boolean()
     }
-)
+);
 
 const updateTodo = zod.object({
     id: zod.string(),
     isCompleted: zod.boolean()
-})
+});
+
+const deleteTodo = zod.object({
+    id: zod.string(),
+});
 
 
 module.exports = {
-    createTodo, updateTodo
+    createTodo, updateTodo, deleteTodo
 }
